@@ -1,2 +1,2 @@
 # Neural-Networks-from-scratch
-This is my first repo on Neural Network
+Hello, this is my repo where i am going to build Neural Networks from scratch.
