@@ -1,0 +1,10 @@
+{
+  "Insert HTML Image Tag": {
+    "scope": "markdown,html,plaintext",
+    "prefix": "img",
+    "body": [
+      "<img src=\"${1:path/to/image.png}\" alt=\"${2:Alt text}\" width=\"${3:400}\" height=\"auto\">$0"
+    ],
+    "description": "Insert HTML image tag with width and height auto"
+  }
+}
