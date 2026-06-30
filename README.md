@@ -14,7 +14,9 @@ A comprehensive, hands-on repository dedicated to building and understanding neu
 │   └── Micrograd_from _scratch.ipynb # Tiny autograd engine & MLP implementation
 ├── attachments/                  # Embedded architecture diagrams and visualizations
 ├── .vscode/                      # Editor workspace snippets and configuration
-├── build_neuron.ipynb            # Coding dense layers, activations, and forward passes
+├── build_nn.ipynb                # Coding dense layers, activations, and forward passes
+├── backprop_scratch.ipynb        # Coding backpropagation from scratch for a single neuron
+├── backprop_layers.ipynb         # Coding backpropagation from scratch for a layer of neurons
 └── README.md                     # Project documentation
 ```
 
@@ -22,7 +24,7 @@ A comprehensive, hands-on repository dedicated to building and understanding neu
 
 ## 🚀 Core Modules
 
-### 1. Foundational Neurons & Dense Layers (`build_neuron.ipynb`)
+### 1. Foundational Neurons & Dense Layers (`build_nn.ipynb`)
 This module focuses on the raw building blocks of neural networks using Python and **NumPy** for vectorization. It implements the forward pass of dense layers from scratch and covers:
 - **Neuron Mathematics**: Implementing single neurons with 3 and 4 inputs by calculating dot products ($y = \sum w_i x_i + b$).
 - **Layer Vectorization**: Expanding to a complete `Layer_Dense` class that handles batches of inputs using matrix multiplication ($Y = XW^T + B$).
@@ -46,6 +48,17 @@ An exploration into character-level autoregressive language models using the `na
   - Using **One-Hot Encoding** for character representation.
   - Designing a forward pass with the **Softmax** activation function to output next-character probability distributions.
   - Optimizing the network parameters by minimizing average Negative Log-Likelihood (NLL) via Stochastic Gradient Descent (SGD).
+
+### 4. Backpropagation from Scratch (`backprop_scratch.ipynb` & `backprop_layers.ipynb`)
+An implementation of backpropagation from first principles using only Python and NumPy:
+- **Single Neuron Backpropagation (`backprop_scratch.ipynb`)**:
+  - Implementing forward pass and loss computation.
+  - Manually deriving local gradients (dloss/doutput, doutput/drelu, dmul/dwi, dmul/dbias) using the chain rule.
+  - Updating weights and bias using Stochastic Gradient Descent (SGD).
+- **Vectorized Layer Backpropagation (`backprop_layers.ipynb`)**:
+  - Scaling backpropagation to a complete dense layer with multiple neurons using vectorization.
+  - Computing weight gradients using outer products (`np.outer`) and biases via derivative summation.
+  - Implementing parameter updates over multiple iterations.
 
 ---
 
