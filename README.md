@@ -125,6 +125,8 @@ Make sure you have Python 3.9+ installed. It is recommended to run these noteboo
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/SouvikGhorui/Neural-Networks-from-scratch/issues) if you want to contribute.
 
+## 📝 License
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 
 ## 💡 Acknowledgements & References
 This repository is built as an educational resource, drawing inspiration and methodologies from:
